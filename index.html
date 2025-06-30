@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+        <div class="calculator-container">
+            <div class="calculator shadow-lg rounded-4">
+                <!-- Display Area -->
+                <div class="display-area p-3">
+                    <div class="previous-operand text-secondary"></div>
+                    <div class="current-operand display-4">0</div>
+                </div>
+                
+                <!-- Calculator Buttons -->
+                <div class="buttons-grid p-3">
+                    <!-- First Row -->
+                    <button type="button" class="btn btn-danger operation-btn" data-operation="clear">AC</button>
+                    <button type="button" class="btn btn-secondary operation-btn" data-operation="backspace">
+                        <i class="fas fa-backspace"></i>
+                    </button>
+                    <button type="button" class="btn btn-secondary operation-btn" data-operation="percentage">%</button>
+                    <button type="button" class="btn btn-warning operation-btn" data-operation="÷">÷</button>
+                    
+                    <!-- Second Row -->
+                    <button type="button" class="btn btn-dark number-btn" data-number="7">7</button>
+                    <button type="button" class="btn btn-dark number-btn" data-number="8">8</button>
+                    <button type="button" class="btn btn-dark number-btn" data-number="9">9</button>
+                    <button type="button" class="btn btn-warning operation-btn" data-operation="×">×</button>
+                    
+                    <!-- Third Row -->
+                    <button type="button" class="btn btn-dark number-btn" data-number="4">4</button>
+                    <button type="button" class="btn btn-dark number-btn" data-number="5">5</button>
+                    <button type="button" class="btn btn-dark number-btn" data-number="6">6</button>
+                    <button type="button" class="btn btn-warning operation-btn" data-operation="-">-</button>
+                    
+                    <!-- Fourth Row -->
+                    <button type="button" class="btn btn-dark number-btn" data-number="1">1</button>
+                    <button type="button" class="btn btn-dark number-btn" data-number="2">2</button>
+                    <button type="button" class="btn btn-dark number-btn" data-number="3">3</button>
+                    <button type="button" class="btn btn-warning operation-btn" data-operation="+">+</button>
+                    
+                    <!-- Fifth Row -->
+                    <button type="button" class="btn btn-dark number-btn" data-number="0">0</button>
+                    <button type="button" class="btn btn-dark number-btn" data-number=".">.</button>
+                    <button type="button" class="btn btn-dark operation-btn" data-operation="±">±</button>
+                    <button type="button" class="btn btn-success operation-btn" data-operation="=">=</button>
+                </div>
+                
+                <!-- History Section -->
+                <div class="history-section p-3">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="mb-0 text-white">Calculation History</h5>
+                        <button type="button" class="btn btn-sm btn-outline-light" id="clear-history">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    <div class="history-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
